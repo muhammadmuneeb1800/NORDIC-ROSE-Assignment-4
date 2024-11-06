@@ -1,38 +1,67 @@
-.App {
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+#logo {
+  width: 100%;
+}
+
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #333;
+  transition: width 0.4s;
+  position: absolute;
+  bottom: -25px;
+}
+
+.nav-link:hover::after {
+  width: 70px;
+}
+
+#hero {
+  text-align: center;
+  width: 650px;
+  margin: 0 auto;
+  line-height: 45px;
+}
+#size-width {
+  width: 600px;
+  margin: 0 auto;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.rectangle {
+  margin: 0 auto;
+  width: 750px;
+}
+#line {
+  width: 600px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-top: 10px solid black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 490px) {
+  #logo {
+    width: 200px;
+    height: auto;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .nav-link::after {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  #hero {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 35px;
+  }
+  #size-width {
+    width: 100%;
+  }
+  .rectangle {
+    width: 100%;
+  }
+  #line {
+    width: 100%;
   }
 }
